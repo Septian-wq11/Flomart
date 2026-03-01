@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Flomart - Master Produk</title>
+</head>
+<body>
+
+    <h1>Form Master Produk Flomart</h1>
+
+    <form id="formProduk" enctype="multipart/form-data">
+
+        <input type="hidden" id="id_produk">
+
+        <!-- UPLOAD GAMBAR -->
+        <div>
+            <label>Upload Gambar Produk</label>
+            <input type="file" id="gambar" accept="image/*">
+        </div>
+
+        <br>
+
+        <div>
+            <label>Nama Produk</label>
+            <input type="text" id="nama_produk" required>
+        </div>
+
+        <br>
+
+        <div>
+            <label>Kategori</label>
+            <select id="kategori" required>
+                <option value="">-- Pilih Kategori --</option>
+                <option value="Benih Sayur">Benih Sayur</option>
+                <option value="Benih Buah">Benih Buah</option>
+                <option value="Benih Pangan">Benih Pangan</option>
+                <option value="Benih Herbal">Benih Herbal</option>
+                <option value="Benih Tanaman Hias">Benih Tanaman Hias</option>
+                <option value="Pupuk Organik">Pupuk Organik</option>
+            </select>
+        </div>
+
+        <br>
+
+        <div>
+            <label>Sub Kategori</label>
+            <input type="text" id="sub_kategori" required>
+        </div>
+
+        <br>
+
+        <div>
+            <label>Harga (Rp)</label>
+            <input type="text" id="harga" required>
+        </div>
+
+        <br>
+
+        <div>
+            <label>Stok</label>
+            <input type="number" id="stok" required>
+        </div>
+
+        <br>
+
+        <div>
+            <label>Iklim Ideal</label>
+            <select id="iklim_ideal">
+                <option value="">-- Pilih Iklim --</option>
+                <option value="Musim Hujan">Musim Hujan</option>
+                <option value="Musim Panas">Musim Panas</option>
+                <option value="Dataran Rendah">Dataran Rendah</option>
+                <option value="Dataran Tinggi">Dataran Tinggi</option>
+            </select>
+        </div>
+
+        <br>
+
+        <div>
+            <label>Jenis Tanah</label>
+            <select id="jenis_tanah">
+                <option value="">-- Pilih Jenis Tanah --</option>
+                <option value="Aluvial">Aluvial</option>
+                <option value="Vulkanik">Vulkanik</option>
+                <option value="Gambut">Gambut</option>
+                <option value="Latosol">Latosol</option>
+                <option value="Pasir">Pasir</option>
+                <option value="Humus">Humus</option>
+            </select>
+        </div>
+
+        <br>
+
+        <div>
+            <label>Garansi (Bulan)</label>
+            <input type="number" id="garansi_bulan" min="0">
+        </div>
+
+        <br>
+
+        <div>
+            <label>Deskripsi</label>
+            <textarea id="deskripsi" rows="4"></textarea>
+        </div>
+
+        <br><br>
+
+        <button type="submit">Simpan Produk</button>
+        <button type="reset">Reset</button>
+
+    </form>
+
+    <hr>
+
+    <h2>Daftar Produk</h2>
+
+    <table border="1" cellpadding="10">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nama</th>
+                <th>Kategori</th>
+                <th>Harga</th>
+                <th>Stok</th>
+            </tr>
+        </thead>
+        <tbody id="dataProduk"></tbody>
+    </table>
+
+    <!-- Hubungkan ke file JS -->
+    <script src="script.js"></script>
+
+</body>
+</html>
