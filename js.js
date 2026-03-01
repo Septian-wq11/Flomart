@@ -1,11 +1,11 @@
-// DATA SUB KATEGORI
+// Data sub kategori
 const subKategoriData = {
     tanaman: ["Tanaman Hias", "Tanaman Buah"],
     benih: ["Benih Sayur", "Benih Buah"],
     pupuk: ["Pupuk Organik", "Pupuk Anorganik"]
 };
 
-// SUB KATEGORI DINAMIS
+// Pengaturan sub kategori
 document.getElementById("kategori").addEventListener("change", function() {
     let kategori = this.value;
     let subSelect = document.getElementById("sub_kategori");
