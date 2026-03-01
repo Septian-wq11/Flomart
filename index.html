@@ -2,130 +2,161 @@
 <html lang="id">
   <head>
     <meta charset="UTF-8" />
-    <title>Flomart - Master Produk</title>
+    <title>Flomart | Tambah Produk</title>
     <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
-    <h1>Form Master Produk Flomart</h1>
+    <!-- TOP NAVBAR -->
+    <header class="topbar">
+      <div class="logo">FLOMART</div>
+      <div class="breadcrumb">Produk &gt; Tambah Produk</div>
+    </header>
 
-    <form id="formProduk" enctype="multipart/form-data">
-      <input type="hidden" id="id_produk" />
+    <!-- LAYOUT -->
+    <div class="layout">
+      <!-- SIDEBAR -->
+      <aside class="sidebar">
+        <nav>
+          <a href="#">Toko</a>
+          <a href="#" class="active">Produk</a>
+          <a href="#">Pesanan &amp; Pengiriman</a>
+          <a href="#">Data</a>
+          <a href="#">Keuangan</a>
+          <a href="#">Pengaturan</a>
+        </nav>
+      </aside>
 
-      <!-- UPLOAD GAMBAR -->
-      <div>
-        <label>Upload Gambar Produk</label>
-        <input type="file" id="gambar" accept="image/*" />
-      </div>
+      <!-- KONTEN UTAMA -->
+      <main class="content">
+        <h1>Tambah Produk</h1>
 
-      <br />
+        <form id="formProduk" enctype="multipart/form-data">
+          <input type="hidden" id="id_produk" />
 
-      <div>
-        <label>Nama Produk</label>
-        <input type="text" id="nama_produk" required />
-      </div>
+          <div>
+            <label for="gambar">Gambar Produk</label>
+            <input type="file" id="gambar" accept="image/*" />
+          </div>
 
-      <br />
+          <div>
+            <label for="nama_produk">Nama Produk</label>
+            <input
+              type="text"
+              id="nama_produk"
+              placeholder="Masukkan nama produk"
+              required
+            />
+          </div>
 
-      <div>
-        <label>Kategori</label>
-        <select id="kategori" required>
-          <option value="">-- Pilih Kategori --</option>
-          <option value="Benih Sayur">Benih Sayur</option>
-          <option value="Benih Buah">Benih Buah</option>
-          <option value="Benih Pangan">Benih Pangan</option>
-          <option value="Benih Herbal">Benih Herbal</option>
-          <option value="Benih Tanaman Hias">Benih Tanaman Hias</option>
-          <option value="Pupuk Organik">Pupuk Organik</option>
-        </select>
-      </div>
+          <div>
+            <label for="kategori">Kategori Produk</label>
+            <select id="kategori" required>
+              <option value="">Pilih kategori</option>
+              <option>Benih Sayur</option>
+              <option>Benih Buah</option>
+              <option>Benih Pangan</option>
+              <option>Benih Herbal</option>
+              <option>Benih Tanaman Hias</option>
+              <option>Pupuk Organik</option>
+            </select>
+          </div>
 
-      <br />
+          <div>
+            <label for="sub_kategori">Sub Kategori</label>
+            <input
+              type="text"
+              id="sub_kategori"
+              placeholder="Contoh: Cabai Rawit"
+            />
+          </div>
 
-      <div>
-        <label>Sub Kategori</label>
-        <input type="text" id="sub_kategori" required />
-      </div>
+          <div>
+            <label for="harga">Harga (Rp)</label>
+            <input
+              type="number"
+              id="harga"
+              placeholder="Contoh: 15000"
+              required
+            />
+          </div>
 
-      <br />
+          <div>
+            <label for="stok">Stok Produk</label>
+            <input
+              type="number"
+              id="stok"
+              placeholder="Jumlah stok tersedia"
+              required
+            />
+          </div>
 
-      <div>
-        <label>Harga (Rp)</label>
-        <input type="number" id="harga" required />
-      </div>
+          <div>
+            <label for="iklim_ideal">Iklim Ideal</label>
+            <select id="iklim_ideal">
+              <option value="">Pilih iklim</option>
+              <option>Musim Hujan</option>
+              <option>Musim Panas</option>
+              <option>Dataran Rendah</option>
+              <option>Dataran Tinggi</option>
+            </select>
+          </div>
 
-      <br />
+          <div>
+            <label for="jenis_tanah">Jenis Tanah Ideal</label>
+            <select id="jenis_tanah">
+              <option value="">Pilih jenis tanah</option>
+              <option>Aluvial</option>
+              <option>Vulkanik</option>
+              <option>Gambut</option>
+              <option>Latosol</option>
+              <option>Pasir</option>
+              <option>Humus</option>
+            </select>
+          </div>
 
-      <div>
-        <label>Stok</label>
-        <input type="number" id="stok" required />
-      </div>
+          <div>
+            <label for="garansi_bulan">Masa Garansi (Bulan)</label>
+            <input
+              type="number"
+              id="garansi_bulan"
+              min="0"
+              placeholder="Contoh: 3"
+            />
+          </div>
 
-      <br />
+          <div>
+            <label for="deskripsi">Deskripsi Produk</label>
+            <textarea
+              id="deskripsi"
+              rows="4"
+              placeholder="Tuliskan deskripsi produk secara singkat dan jelas"
+            ></textarea>
+          </div>
 
-      <div>
-        <label>Iklim Ideal</label>
-        <select id="iklim_ideal">
-          <option value="">-- Pilih Iklim --</option>
-          <option value="Musim Hujan">Musim Hujan</option>
-          <option value="Musim Panas">Musim Panas</option>
-          <option value="Dataran Rendah">Dataran Rendah</option>
-          <option value="Dataran Tinggi">Dataran Tinggi</option>
-        </select>
-      </div>
+          <button type="submit">Simpan Produk</button>
+          <button type="reset">Reset Form</button>
+        </form>
 
-      <br />
+        <hr />
 
-      <div>
-        <label>Jenis Tanah</label>
-        <select id="jenis_tanah">
-          <option value="">-- Pilih Jenis Tanah --</option>
-          <option value="Aluvial">Aluvial</option>
-          <option value="Vulkanik">Vulkanik</option>
-          <option value="Gambut">Gambut</option>
-          <option value="Latosol">Latosol</option>
-          <option value="Pasir">Pasir</option>
-          <option value="Humus">Humus</option>
-        </select>
-      </div>
+        <h2>Daftar Produk</h2>
 
-      <br />
+        <table>
+          <thead>
+            <tr>
+              <th>ID Produk</th>
+              <th>Nama Produk</th>
+              <th>Kategori</th>
+              <th>Harga</th>
+              <th>Stok</th>
+            </tr>
+          </thead>
+          <tbody id="dataProduk"></tbody>
+        </table>
+      </main>
+    </div>
 
-      <div>
-        <label>Garansi (Bulan)</label>
-        <input type="number" id="garansi_bulan" min="0" />
-      </div>
-
-      <br />
-
-      <div>
-        <label>Deskripsi</label>
-        <textarea id="deskripsi" rows="4"></textarea>
-      </div>
-
-      <br /><br />
-
-      <button type="submit">Simpan Produk</button>
-      <button type="reset">Reset</button>
-    </form>
-
-    <hr />
-
-    <h2>Daftar Produk</h2>
-
-    <table border="1" cellpadding="10">
-      <thead>
-        <tr>
-          <th>ID</th>
-          <th>Nama</th>
-          <th>Kategori</th>
-          <th>Harga</th>
-          <th>Stok</th>
-        </tr>
-      </thead>
-      <tbody id="dataProduk"></tbody>
-    </table>
-
-    <!-- Hubungkan ke file JS -->
     <script src="script.js"></script>
   </body>
 </html>
