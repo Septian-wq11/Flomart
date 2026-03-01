@@ -1,4 +1,4 @@
-/* RESET DASAR */
+/* Reset */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -11,7 +11,7 @@ body {
   padding: 0;
   color: #333;
 }
-/* TOP NAVBAR */
+/* Navbar */
 .topbar {
   position: fixed;
   top: 0;
@@ -38,15 +38,15 @@ body {
   color: #777;
 }
 
-/* LAYOUT UTAMA */
+/* Layout */
 .layout {
   min-height: 100vh;
 }
 
-/* SIDEBAR */
+/* Sidebar */
 .sidebar {
   position: fixed;
-  top: 60px; /* tinggi topbar */
+  top: 60px; 
   left: 0;
   width: 220px;
   height: calc(100vh - 60px);
@@ -80,14 +80,14 @@ body {
   color: #2e7d32;
 }
 
-/* AREA KONTEN */
+/* Konten */
 .content {
   margin-top: 60px;
   margin-left: 220px;
   padding: 30px;
 }
 
-/* JUDUL */
+/* Judul */
 h1 {
   margin: 15px auto 12px;
   max-width: 720px;
@@ -100,36 +100,36 @@ h2 {
   font-size: 18px;
 }
 
-/* FORM CARD */
+
 #formProduk {
   background: #fff;
-  max-width: 720px; /* 🔑 tidak terlalu lebar */
+  max-width: 720px; /* tidak terlalu lebar */
   margin: 0 auto 30px;
-  padding: 22px 26px; /* 🔑 padding lebih rapat */
+  padding: 22px 26px; /* padding lebih rapat */
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
-/* SETIAP FIELD */
+
 #formProduk > div {
   display: flex;
   flex-direction: column;
-  margin-bottom: 14px; /* 🔑 jarak antar field diperkecil */
+  margin-bottom: 14px; /* jarak antar field diperkecil */
 }
 
-/* LABEL */
+
 label {
   font-size: 13px;
   margin-bottom: 5px;
   font-weight: 600;
 }
 
-/* INPUT */
+
 input[type="text"],
 input[type="number"],
 select,
 textarea {
-  padding: 8px 12px; /* 🔑 input tidak terlalu tinggi */
+  padding: 8px 12px; /* input tidak terlalu tinggi */
   font-size: 14px;
   border-radius: 8px;
   border: 1px solid #ccc;
@@ -139,18 +139,18 @@ textarea {
   resize: none;
 }
 
-/* FILE INPUT */
+
 input[type="file"] {
   padding: 6px;
   font-size: 13px;
 }
 
-/* HILANGKAN JARAK <br> */
+
 br {
   display: none;
 }
 
-/* BUTTON */
+
 button {
   padding: 9px 18px;
   font-size: 14px;
@@ -168,12 +168,12 @@ button[type="reset"] {
   background: #ddd;
 }
 
-/* TOMBOL RAPI */
+
 #formProduk button {
   margin-top: 10px;
 }
 
-/* HR */
+
 hr {
   max-width: 720px;
   margin: 30px auto;
@@ -181,7 +181,7 @@ hr {
   border-top: 1px solid #ddd;
 }
 
-/* TABLE */
+
 .table-wrapper {
   max-width: 720px;
   margin: 0 auto;
