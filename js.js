@@ -22,8 +22,22 @@ document.getElementById("kategori").addEventListener("change", function() {
     }
 });
 
+// Fungsi cek hanya huruf dan spasi
+function hanyaHuruf(text) {
+    for (let i = 0; i < text.length; i++) {
+        let char = text[i];
 
-// VALIDASI FORM
+        // Cek apakah karakter bukan huruf dan bukan spasi
+        if (!(char >= 'a' && char <= 'z') &&
+            !(char >= 'A' && char <= 'Z') &&
+            char !== ' ') {
+            return false;
+        }
+    }
+    return true;
+}
+
+// Validasi form
 document.getElementById("formProduk").addEventListener("submit", function(event) {
 
     let namaProduk = document.getElementById("nama_produk").value.trim();
@@ -49,6 +63,12 @@ document.getElementById("formProduk").addEventListener("submit", function(event)
         return;
     }
 
+    if (!hanyaHuruf(namaProduk)) {
+        alert("Nama produk hanya boleh berisi huruf dan spasi!");
+        event.preventDefault();
+        return;
+    }
+
     if (kategori === "") {
         alert("Silakan pilih kategori!");
         event.preventDefault();
@@ -57,6 +77,12 @@ document.getElementById("formProduk").addEventListener("submit", function(event)
 
     if (subKategori === "") {
         alert("Silakan pilih sub kategori!");
+        event.preventDefault();
+        return;
+    }
+
+    if (!hanyaHuruf(subKategori)) {
+        alert("Sub kategori hanya boleh berisi huruf dan spasi!");
         event.preventDefault();
         return;
     }
@@ -93,6 +119,12 @@ document.getElementById("formProduk").addEventListener("submit", function(event)
 
     if (deskripsi.length < 10) {
         alert("Deskripsi minimal 10 karakter!");
+        event.preventDefault();
+        return;
+    }
+
+    if (!hanyaHuruf(deskripsi)) {
+        alert("Deskripsi hanya boleh berisi huruf dan spasi!");
         event.preventDefault();
         return;
     }
