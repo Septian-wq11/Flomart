@@ -30,7 +30,8 @@ function hanyaHuruf(text) {
         // Cek apakah karakter bukan huruf dan bukan spasi
         if (!(char >= 'a' && char <= 'z') &&
             !(char >= 'A' && char <= 'Z') &&
-            char !== ' ') {
+            char !== ' ' && 
+            char !== "'") {
             return false;
         }
     }
@@ -129,5 +130,7 @@ document.getElementById("formProduk").addEventListener("submit", function(event)
         return;
     }
 
-    alert("Produk berhasil disimpan! (Simulasi)");
+    event.preventDefault();
+    alert("Produk berhasil disimpan!");
+    document.getElementById("formProduk").reset();
 });
